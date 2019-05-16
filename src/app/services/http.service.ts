@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import {catchError} from 'rxjs/operators'
+import {environment} from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -7,31 +9,33 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 export class HttpService {
 
   httpOptions ={headers: new HttpHeaders({
-    'authorization':'token'
+    'authorization':''
   })};
 
   constructor(private httpClient:HttpClient) { }
 
   updateAuthToken(token:string){
-     this.httpOptions.headers['authorization'] = token;
+     this.httpOptions.headers['Authorization'] = token;
   }
 
   get<T>(url:string){
-    return this.httpClient.get<T>(this.getUrl(url),this.httpOptions);
+    return this.httpClient.get<T>(this.getUrl(url),this.httpOptions)
+    .pipe(catchError(this.handleError));
   }
 
   put<T>(url:string,data:any|null){
-    return this.httpClient.put<T>(this.getUrl(url),data);
-    //.pipe(catchError(err=>this.handleError(err)));
+    return this.httpClient.put<T>(this.getUrl(url),data)
+    .pipe(catchError(this.handleError));
   }
 
   post<T>(url:string, data :any|null){
-    return this.httpClient.post<T>(this.getUrl(url), data,this.httpOptions);
-    //.pipe(catchError(err=>this.handleError(err)));
+    return this.httpClient.post<T>(this.getUrl(url), data,this.httpOptions)
+    .pipe(catchError(this.handleError));
   }
 
   delete<T>(url:string){
-    return this.httpClient.delete(this.getUrl(url),this.httpOptions);
+    return this.httpClient.delete(this.getUrl(url),this.httpOptions)
+    .pipe(catchError(this.handleError));
   }
 
   getUrl(relativeUrl:string){
@@ -39,17 +43,18 @@ export class HttpService {
       if(relativeUrl.startsWith('http')){
         return relativeUrl;
       }else{
-        if(relativeUrl.startsWith('/')){
-          return '${environment.baseServerUrl}{relativeUrl}';
+        if(environment.baseServerUrl.endsWith('/') || relativeUrl.startsWith('/')){
+          return environment.baseServerUrl+relativeUrl;
         }else{
-          return '${environment.baseServerUrl}/{relativeUrl}';
+          return environment.baseServerUrl+"/"+relativeUrl;
         }
       }
     }
     return relativeUrl;
   }
 
-  handleError(err){
-
+  handleError(err:HttpErrorResponse){
+    console.error(err);
+    return null;
   }
 }

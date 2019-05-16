@@ -11,12 +11,24 @@ export class AutGuardService implements CanActivate,CanActivateChild{
 
   canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){
 
+    if(this.authService.currentUser != null){
+      console.log("canActivate :true" );
+      return true;
+    }
+    this.router.navigate(['login']);
+    console.log("canActivate :false" );
     return false;
   }
   
   canActivateChild(route:ActivatedRouteSnapshot,state:RouterStateSnapshot){
     
-    
+    if(this.authService.hasPermission())
+    {
+      console.log("canActivateChild :true" );
+      return true;
+    }
+    console.log("canActivateChild :true" );
+
     return false;
   }
 

@@ -1,4 +1,5 @@
 export const environment = {
   production: true,  
-  baseServerUrl:'http://localhost:8080/api/'
+  baseServerUrl:'http://localhost:8080/api/',
+  enableTracing:false
 };

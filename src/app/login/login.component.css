@@ -1,0 +1,28 @@
+
+.login-body {
+    background: url("../../assets/img/login_bg.jpg") repeat;
+    animation: login-animation;
+    animation-delay: 3;
+    animation-duration: 6;
+    animation-iteration-count: infinite;    
+    animation-play-state: running;
+    
+    -webkit-animation-delay: 3;
+    -webkit-animation-duration: 6;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+@keyframes login-animation{
+    0% {background: url("../../assets/img/login_bg1.jpg")};
+    50% {background: url("../../assets/img/login_bg.jpg")};
+    100% {background: url("../../assets/img/login_bg1.jpg")};
+}
+
+h3 {
+    font-size: 2em;
+}

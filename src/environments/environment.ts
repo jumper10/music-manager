@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseServerUrl:'http://localhost:8080/api/'
+  baseServerUrl:'http://localhost:8080/api/',
+  enableTracing:true
 };
 
 /*

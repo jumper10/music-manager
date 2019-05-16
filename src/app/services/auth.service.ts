@@ -11,15 +11,19 @@ export class AuthService {
 
   constructor(private httpService:HttpService) { }
 
+  setCurrentUser(user){
+    this.currentUser = user;
+  }
+
   authenticate(userName,password,validCode){
-    this.httpService.post('login',{
+    return this.httpService.post('users/login',{
       'userName':userName,
       'password':password,
       'validCode':validCode
-    }).subscribe()
+    })
   }
 
   hasPermission(){
-    return false;
+    return true;
   }
 }
