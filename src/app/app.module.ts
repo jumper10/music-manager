@@ -13,7 +13,6 @@ import { MvComponent } from './mv/mv.component';
 import { SingerComponent } from './singer/singer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TopbarComponent } from './common/topbar/topbar.component';
 import { LeftmenuComponent } from './common/leftmenu/leftmenu.component';
 
@@ -35,7 +34,6 @@ import { LeftmenuComponent } from './common/leftmenu/leftmenu.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule.forRoot(),
     BrowserAnimationsModule
   ],
   providers: [],
