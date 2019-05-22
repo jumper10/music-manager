@@ -1,26 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid">
-  <div>
-      <app-topbar></app-topbar>
+
+
+
+<div class="container home-page">
+
+  <div class="row">
+    <div class="col-md-auto">
+      <app-leftmenu></app-leftmenu>
+    </div>
+
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
   </div>
- 
-<div >
-  <app-leftmenu></app-leftmenu>
-  <ul>
-      <li>
-        <i class="fas fa-home menu-icon" ></i>
-        <h2><a target="_blank" rel="noopener" href="login">Login</a></h2>
-      </li>
-      <li>
-          <i class="fab fa-camera menu-icon"></i>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
-</div>
-<div>
-    <router-outlet></router-outlet>
-</div>
+  <footer>
+    <div class=span12>
+      <p>foot bar</p>
+    </div>
+  </footer>
 </div>

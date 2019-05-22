@@ -1,7 +1,12 @@
 @import '../app.component.scss';
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 .home-page{
     color: $bootstrap-gray;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($bootstrap-gray-dark, 0.3);
 
     .menu-icon{
         display: inline-block;
