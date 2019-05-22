@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { environment } from 'src/environments/environment';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent,canActivate:[AutGuardService],
+  {path:'', component: HomeComponent,
      children:[
        {path:'',component:MusicComponent},
        {path:'user',component:UserComponent,canActivateChild:[AutGuardService]},

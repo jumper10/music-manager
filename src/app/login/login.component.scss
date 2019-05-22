@@ -1,0 +1,42 @@
+@import '../app.component.scss';
+@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+body{
+    background-color: #444  !important;
+}
+
+@keyframes login-animation{
+    0% {background: url("../../assets/img/login_bg1.jpg");};
+    50% {background: url("../../assets/img/login_bg.jpg");};
+    100% {background: url("../../assets/img/login_bg1.jpg");};
+}
+
+.login-page {
+    background: url("../../assets/img/login_bg.jpg") ;
+    background-size: 100% 100%;
+    animation: login-animation 6s infinite;
+    animation-delay: 3;   
+    height: 100%;
+    width: 100%;
+
+    .login-form{       
+        top: 30%;
+        max-width: 360px;
+        border: 1px solid $bootstrap-indigo;
+        border-radius: 5px;
+        background-color: rgba($bootstrap-gray-dark, 0.3)
+    }
+    
+    h3 {
+        font-size: 2em;
+        color: $bootstrap-white;
+    }
+    a {
+        color: $bootstrap-blue;
+    }
+    p {
+        color: $bootstrap-gray;
+    }
+}
+

@@ -1,6 +1,5 @@
 <div class="container login-page">
-
-  <div class="form　col-md-4 login-form form-horizontal offset-md-6">
+  <div class="col-md-4 login-form float-right offset-md-4">
     <h3>Login</h3>
     <div class="form-group">
       <input class="form-control" placeholder="用户名" [(ngModel)]="userName" />
@@ -11,13 +10,13 @@
     <div class="form-group">
       <input class="form-control" placeholder="验证码" [(ngModel)]="validCode" />
     </div>
-    <div class="row">
-      <div class="col-md-5">
-        <button class="btn btn-primary" (click)="login()">Login</button>
-      </div>
-      <div>
-        <button type="button" class="btn btn-primary" (click)="hide()">Reset</button>
-      </div>
+    <div class="form-group">
+      <button class="form-control btn btn-primary  m-b" (click)="login()">Login</button>
     </div>
+    <p class="text-center">
+      <a><small>忘记密码？</small></a>
+       | 
+      <a>注册</a>
+    </p>
   </div>
 </div>

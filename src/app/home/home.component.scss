@@ -1,0 +1,12 @@
+@import '../app.component.scss';
+
+.home-page{
+    color: $bootstrap-gray;
+
+    .menu-icon{
+        display: inline-block;
+        color: #222;
+        background: transparent;
+    }
+
+}
