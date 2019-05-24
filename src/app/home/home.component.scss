@@ -1,17 +1,44 @@
 @import '../app.component.scss';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
 
 .home-page{
     color: $bootstrap-gray;
     width: 100%;
     height: 100%;
 
-    background-color: rgba($bootstrap-gray-dark, 0.3);
+    .row-fluid{
+        height: 100%;
+    }
 
+    .row-body{
+        padding-left: 20px;
+    }
+
+    .nav-left{
+        min-width: 70px;
+        width: auto;
+        height: 100%;
+        background:  $bootstrap-gray-dark;
+       
+        .user-info{
+            height: 246px;
+            .user-photo{
+                border-radius: 50%;
+                padding: 33px 22px;
+            }
+            .collapse-user-btn{
+                padding-top: 160px;
+            }
+        }
+        .menu-header{
+            width: 132px;
+        }
+    }
+   
     .menu-icon{
         display: inline-block;
         color: #222;
         background: transparent;
     }
-
 }

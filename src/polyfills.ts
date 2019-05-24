@@ -62,4 +62,3 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * APPLICATION IMPORTS
  */
 import 'bootstrap/dist/js/bootstrap.min.js'
-import '@fortawesome/fontawesome-free/js/all.js'

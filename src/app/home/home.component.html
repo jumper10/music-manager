@@ -1,21 +1,61 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid home-page">
+  <!--content-->
+  <div class="row  row-fluid">
+    <!--left menu-->
+    <div class="nav-left slide" data-interval="1000">
+      <div class="container user-info">
+        <div class="row collapse  show">
+          <img class="user-photo" src="../../assets/img/profile_small.jpg" />
+        </div>
+        <div class="row collapse  show">
+          <p>用戶名</p>
+        </div>
 
 
 
-<div class="container home-page">
+        <div class="row  dropdown">
+          <button class="collapse show btn btn-secondary dropdown-toggle dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+            用戶角色
+            </button>
+            <i class="fa  fa-user collapse dropdownMenuButton" data-toggle="dropdown"></i>
+            
+            <div class="dropdown-menu" aria-labellebdy=".dropdownMenuButton">
+              <a class="dropdown-item">Action</a>
 
-  <div class="row">
-    <div class="col-md-auto">
-      <app-leftmenu></app-leftmenu>
+            </div>
+        </div>
+    
+      </div>
+
+      <nav class="navbar navbar-default ">
+        <div class="row"> 
+          <i class="fa  fa-home"></i>
+          <div class="menu-header collapse show">menu</div>
+        </div>
+      </nav>
     </div>
+    <!--body-->
+    <div class="col-* row-body">
+      <div class="row">
+        <i class="fa fa-bars" data-toggle="collapse" data-target=".collapse"></i>
+        <p>topbar</p>
+      </div>
+      <div class="row">
+        <div class="col-md-auto">
+          <app-leftmenu></app-leftmenu>
+        </div>
 
-    <div class="col-md-10">
-      <router-outlet></router-outlet>
+        <div class="col-md-10">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <footer>
+        <div class=span12>
+          <p>foot bar</p>
+        </div>
+      </footer>
     </div>
   </div>
-  <footer>
-    <div class=span12>
-      <p>foot bar</p>
-    </div>
-  </footer>
 </div>
