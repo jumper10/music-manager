@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { TopbarComponent } from './common/topbar/topbar.component';
 import { LeftmenuComponent } from './common/leftmenu/leftmenu.component';
+import { DialogComponent } from './common/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LeftmenuComponent } from './common/leftmenu/leftmenu.component';
     SingerComponent,
     HomeComponent,
     TopbarComponent,
-    LeftmenuComponent
+    LeftmenuComponent,
+    DialogComponent
   ],
   imports: [    
     BrowserModule,

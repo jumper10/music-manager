@@ -4,43 +4,50 @@
   <div class="row  row-fluid">
     <!--left menu-->
     <div class="nav-left slide" data-interval="1000">
-      <div class="container user-info">
-        <div class="row collapse  show">
+      <div class=" user-info">
+        <div id="user-photo" class="row collapse  show">
           <img class="user-photo" src="../../assets/img/profile_small.jpg" />
         </div>
-        <div class="row collapse  show">
-          <p>用戶名</p>
+        <div class="collapse show">
+         用戶名
         </div>
 
-
-
-        <div class="row  dropdown">
-          <button class="collapse show btn btn-secondary dropdown-toggle dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
+        <div class="user-role  dropdown clear">
+          <a class="collapse show clear dropdown-toggle dropdownMenuButton" 
+          data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             用戶角色
-            </button>
-            <i class="fa  fa-user collapse dropdownMenuButton" data-toggle="dropdown"></i>
-            
-            <div class="dropdown-menu" aria-labellebdy=".dropdownMenuButton">
-              <a class="dropdown-item">Action</a>
+        </a>
 
-            </div>
+          <i class="collapse-user-btn fa fa-user collapse dropdownMenuButton" data-toggle="dropdown"></i>
+
+          <div class="dropdown-menu" aria-labellebdy=".dropdownMenuButton">
+            <a class="dropdown-item">Action</a>
+            <a class="dropdown-item">Action</a>
+            <a class="dropdown-item">Action</a>
+          </div>
         </div>
-    
+
       </div>
 
       <nav class="navbar navbar-default ">
-        <div class="row"> 
+        <div class="row">
           <i class="fa  fa-home"></i>
           <div class="menu-header collapse show">menu</div>
         </div>
       </nav>
     </div>
     <!--body-->
-    <div class="col-* row-body">
-      <div class="row">
-        <i class="fa fa-bars" data-toggle="collapse" data-target=".collapse"></i>
-        <p>topbar</p>
+    <div class="col-* row-body m-b" [class]='collapse_margin'>
+      <div class="row top-bar">
+        <a class="btn btn-primary nav-toggle">
+          <i class="fa fa-bars" data-toggle="collapse" data-target=".collapse"></i>
+        </a>
+        <div class="form form-search">
+          <div class="form-group">
+            <input class="form-control control-search" placeholder="密码" [(ngModel)]="password" />
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-auto">

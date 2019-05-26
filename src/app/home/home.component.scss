@@ -1,44 +1,88 @@
-@import '../app.component.scss';
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../../../node_modules/bootstrap/dist/css/bootstrap-reboot.css';
+@import "../app.component.scss";
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-.home-page{
-    color: $bootstrap-gray;
-    width: 100%;
+.home-page {
+  color: $bootstrap-gray;
+  width: 100%;
+  height: 100%;
+
+  .row-fluid {
     height: 100%;
+  }
 
-    .row-fluid{
-        height: 100%;
+  .nav-left {
+    min-width: 70px;
+    width: auto;
+    height: 100%;
+    transition: all 0.5s;
+    background: $bootstrap-gray-dark;
+
+    .user-info {
+      padding:13px 33px 8px 33px;
+      font-size:12px;
+      border-bottom: 1px  solid $bootstrap-light;
+      .user-photo {
+        border-radius: 50%;
+      }
+      .user-role{
+        margin: 0%;
+        padding: 0%;
+      }
+      .collapse-user-btn {
+        padding-top: 20px;
+      }
+    }
+    .menu-header {
+      width: 132px;
+    }
+  }
+  .row-body {
+    padding-left: 20px;
+    padding-right: 0%;
+    margin-right: 0px;
+    display: block;
+    width: 100%;
+    transition: all  0.5s;
+
+    .collapse-margin{
+      margin-left: 77px;
+
+    }
+    .collapse-false-margin{
+      margin-left: 220px;
     }
 
-    .row-body{
-        padding-left: 20px;
-    }
+    .top-bar {
+      background: $topbar-background;
+      display: block;
+      width: 100%;
 
-    .nav-left{
-        min-width: 70px;
-        width: auto;
-        height: 100%;
-        background:  $bootstrap-gray-dark;
-       
-        .user-info{
-            height: 246px;
-            .user-photo{
-                border-radius: 50%;
-                padding: 33px 22px;
-            }
-            .collapse-user-btn{
-                padding-top: 160px;
-            }
-        }
-        .menu-header{
-            width: 132px;
-        }
-    }
-   
-    .menu-icon{
+      .nav-toggle {
+        padding: 4px 12px;
+        margin: 10px 5px 15px 20px;
+        font-size: 14px;
         display: inline-block;
-        color: #222;
-        background: transparent;
+        font-weight: 400;
+        vertical-align: middle;
+      }
+      .form-search {
+        height: 50px;
+        display: inline-block;
+
+        .control-search {
+          height: 60px;
+          border: medium none;
+          background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+          margin: 0;
+          padding: 6px 12px !important;
+        }
+      }
     }
+  }
+
+  .menu-icon {
+    display: inline-block;
+    color: #222;
+    background: transparent;
+  }
 }
